@@ -2539,6 +2539,10 @@ export namespace documentai_v1beta2 {
      */
     createTime?: string | null;
     /**
+     * The Crowd Compute question ID.
+     */
+    questionId?: string | null;
+    /**
      * Used only when Operation.done is false.
      */
     state?: string | null;
@@ -2693,6 +2697,10 @@ export namespace documentai_v1beta2 {
      * The basic metadata of the long running operation.
      */
     commonMetadata?: Schema$GoogleCloudDocumentaiV1CommonOperationMetadata;
+    /**
+     * The Crowd Compute question ID.
+     */
+    questionId?: string | null;
   }
   /**
    * Response message for review document method.

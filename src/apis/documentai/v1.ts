@@ -2428,6 +2428,10 @@ export namespace documentai_v1 {
      */
     createTime?: string | null;
     /**
+     * The Crowd Compute question ID.
+     */
+    questionId?: string | null;
+    /**
      * Used only when Operation.done is false.
      */
     state?: string | null;
@@ -3563,6 +3567,10 @@ export namespace documentai_v1 {
      * The basic metadata of the long running operation.
      */
     commonMetadata?: Schema$GoogleCloudDocumentaiV1CommonOperationMetadata;
+    /**
+     * The Crowd Compute question ID.
+     */
+    questionId?: string | null;
   }
   /**
    * Request message for review document method.
@@ -4066,7 +4074,7 @@ export namespace documentai_v1 {
     }
 
     /**
-     * Fetches processor types.
+     * Fetches processor types. Note that we do not use ListProcessorTypes here because it is not paginated.
      * @example
      * ```js
      * // Before running the sample:
