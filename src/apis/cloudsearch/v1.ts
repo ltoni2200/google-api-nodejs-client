@@ -2306,7 +2306,7 @@ export namespace cloudsearch_v1 {
     validateOnly?: boolean | null;
   }
   /**
-   * Represents an upload session reference. This reference is created via upload method. Updating of item content may refer to this uploaded content via contentDataRef.
+   * Represents an upload session reference. This reference is created via upload method. UploadItemRef may be used upto 30 days since creation. Updating of item content may refer to this uploaded content via contentDataRef.
    */
   export interface Schema$UploadItemRef {
     /**
