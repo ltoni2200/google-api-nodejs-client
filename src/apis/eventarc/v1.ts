@@ -190,6 +190,10 @@ export namespace eventarc_v1 {
    */
   export interface Schema$Destination {
     /**
+     * The Cloud Function resource name. Only Cloud Functions V2 is supported. Format: projects/{project\}/locations/{location\}/functions/{function\}
+     */
+    cloudFunction?: string | null;
+    /**
      * Cloud Run fully-managed resource that receives the events. The resource should be in the same project as the trigger.
      */
     cloudRun?: Schema$CloudRun;
@@ -334,7 +338,7 @@ export namespace eventarc_v1 {
     nextPageToken?: string | null;
   }
   /**
-   * The response message for the ListTriggers method.
+   * The response message for the `ListTriggers` method.
    */
   export interface Schema$ListTriggersResponse {
     /**
@@ -2415,7 +2419,7 @@ export namespace eventarc_v1 {
      *     parent: 'projects/my-project/locations/my-location',
      *     // Required. The user-provided ID to be assigned to the trigger.
      *     triggerId: 'placeholder-value',
-     *     // Required. If set, validate the request and preview the review, but do not actually post it.
+     *     // Required. If set, validate the request and preview the review, but do not post it.
      *     validateOnly: 'placeholder-value',
      *
      *     // Request body metadata
@@ -2578,7 +2582,7 @@ export namespace eventarc_v1 {
      *     etag: 'placeholder-value',
      *     // Required. The name of the trigger to be deleted.
      *     name: 'projects/my-project/locations/my-location/triggers/my-trigger',
-     *     // Required. If set, validate the request and preview the review, but do not actually post it.
+     *     // Required. If set, validate the request and preview the review, but do not post it.
      *     validateOnly: 'placeholder-value',
      *   });
      *   console.log(res.data);
@@ -2984,7 +2988,7 @@ export namespace eventarc_v1 {
      *
      *   // Do the magic
      *   const res = await eventarc.projects.locations.triggers.list({
-     *     // The sorting order of the resources returned. Value should be a comma separated list of fields. The default sorting oder is ascending. To specify descending order for a field, append a ` desc` suffix; for example: `name desc, trigger_id`.
+     *     // The sorting order of the resources returned. Value should be a comma-separated list of fields. The default sorting order is ascending. To specify descending order for a field, append a `desc` suffix; for example: `name desc, trigger_id`.
      *     orderBy: 'placeholder-value',
      *     // The maximum number of triggers to return on each page. Note: The service may send fewer.
      *     pageSize: 'placeholder-value',
@@ -3130,9 +3134,9 @@ export namespace eventarc_v1 {
      *     allowMissing: 'placeholder-value',
      *     // Required. The resource name of the trigger. Must be unique within the location of the project and must be in `projects/{project\}/locations/{location\}/triggers/{trigger\}` format.
      *     name: 'projects/my-project/locations/my-location/triggers/my-trigger',
-     *     // The fields to be updated; only fields explicitly provided will be updated. If no field mask is provided, all provided fields in the request will be updated. To update all fields, provide a field mask of "*".
+     *     // The fields to be updated; only fields explicitly provided are updated. If no field mask is provided, all provided fields in the request are updated. To update all fields, provide a field mask of "*".
      *     updateMask: 'placeholder-value',
-     *     // Required. If set, validate the request and preview the review, but do not actually post it.
+     *     // Required. If set, validate the request and preview the review, but do not post it.
      *     validateOnly: 'placeholder-value',
      *
      *     // Request body metadata
@@ -3557,7 +3561,7 @@ export namespace eventarc_v1 {
      */
     triggerId?: string;
     /**
-     * Required. If set, validate the request and preview the review, but do not actually post it.
+     * Required. If set, validate the request and preview the review, but do not post it.
      */
     validateOnly?: boolean;
 
@@ -3581,7 +3585,7 @@ export namespace eventarc_v1 {
      */
     name?: string;
     /**
-     * Required. If set, validate the request and preview the review, but do not actually post it.
+     * Required. If set, validate the request and preview the review, but do not post it.
      */
     validateOnly?: boolean;
   }
@@ -3606,7 +3610,7 @@ export namespace eventarc_v1 {
   export interface Params$Resource$Projects$Locations$Triggers$List
     extends StandardParameters {
     /**
-     * The sorting order of the resources returned. Value should be a comma separated list of fields. The default sorting oder is ascending. To specify descending order for a field, append a ` desc` suffix; for example: `name desc, trigger_id`.
+     * The sorting order of the resources returned. Value should be a comma-separated list of fields. The default sorting order is ascending. To specify descending order for a field, append a `desc` suffix; for example: `name desc, trigger_id`.
      */
     orderBy?: string;
     /**
@@ -3633,11 +3637,11 @@ export namespace eventarc_v1 {
      */
     name?: string;
     /**
-     * The fields to be updated; only fields explicitly provided will be updated. If no field mask is provided, all provided fields in the request will be updated. To update all fields, provide a field mask of "*".
+     * The fields to be updated; only fields explicitly provided are updated. If no field mask is provided, all provided fields in the request are updated. To update all fields, provide a field mask of "*".
      */
     updateMask?: string;
     /**
-     * Required. If set, validate the request and preview the review, but do not actually post it.
+     * Required. If set, validate the request and preview the review, but do not post it.
      */
     validateOnly?: boolean;
 
