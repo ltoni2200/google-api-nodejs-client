@@ -423,6 +423,10 @@ export namespace redis_v1beta1 {
      */
     reservedIpRange?: string | null;
     /**
+     * Optional. Additional ip ranges for node placement, beyond those specified in reserved_ip_range. At most 1 secondary IP range is supported. The mask value must not exceed /28. Not supported for BASIC tier. Updates can only add new ranges, once added ranges cannot be changed or deleted. Values in this list cannot overlap with the reserved_ip_range. Not supported during instance creation.
+     */
+    secondaryIpRange?: string | null;
+    /**
      * Output only. List of server CA certificates for the instance.
      */
     serverCaCerts?: Schema$TlsCertificate[];
@@ -1133,6 +1137,7 @@ export namespace redis_v1beta1 {
      *       //   "redisVersion": "my_redisVersion",
      *       //   "replicaCount": 0,
      *       //   "reservedIpRange": "my_reservedIpRange",
+     *       //   "secondaryIpRange": "my_secondaryIpRange",
      *       //   "serverCaCerts": [],
      *       //   "state": "my_state",
      *       //   "statusMessage": "my_statusMessage",
@@ -1715,6 +1720,7 @@ export namespace redis_v1beta1 {
      *   //   "redisVersion": "my_redisVersion",
      *   //   "replicaCount": 0,
      *   //   "reservedIpRange": "my_reservedIpRange",
+     *   //   "secondaryIpRange": "my_secondaryIpRange",
      *   //   "serverCaCerts": [],
      *   //   "state": "my_state",
      *   //   "statusMessage": "my_statusMessage",
@@ -2288,6 +2294,7 @@ export namespace redis_v1beta1 {
      *       //   "redisVersion": "my_redisVersion",
      *       //   "replicaCount": 0,
      *       //   "reservedIpRange": "my_reservedIpRange",
+     *       //   "secondaryIpRange": "my_secondaryIpRange",
      *       //   "serverCaCerts": [],
      *       //   "state": "my_state",
      *       //   "statusMessage": "my_statusMessage",
