@@ -224,6 +224,10 @@ export namespace recaptchaenterprise_v1 {
      */
     expectedAction?: string | null;
     /**
+     * Optional. Optional unique stable hashed user identifier for the request. The identifier should ideally be hashed using sha256 with stable secret.
+     */
+    hashedAccountId?: string | null;
+    /**
      * Optional. The site key that was used to invoke reCAPTCHA on your site and generate the token.
      */
     siteKey?: string | null;
