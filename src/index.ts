@@ -241,6 +241,7 @@ export {iap_v1beta1} from './apis/iap/v1beta1';
 export {ideahub_v1alpha} from './apis/ideahub/v1alpha';
 export {ideahub_v1beta} from './apis/ideahub/v1beta';
 export {identitytoolkit_v3} from './apis/identitytoolkit/v3';
+export {ids_v1} from './apis/ids/v1';
 export {indexing_v3} from './apis/indexing/v3';
 export {jobs_v2} from './apis/jobs/v2';
 export {jobs_v3} from './apis/jobs/v3';
