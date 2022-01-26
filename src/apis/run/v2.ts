@@ -243,19 +243,6 @@ export namespace run_v2 {
     name?: string | null;
   }
   /**
-   * ContainerStatus holds the information of container name and image digest value.
-   */
-  export interface Schema$GoogleCloudRunOpV2ContainerStatus {
-    /**
-     * ImageDigest holds the resolved digest for the image specified, regardless of whether a tag or digest was originally specified in the Container object.
-     */
-    imageDigest?: string | null;
-    /**
-     * The name of the container, if specified.
-     */
-    name?: string | null;
-  }
-  /**
    * EnvVar represents an environment variable present in a Container.
    */
   export interface Schema$GoogleCloudRunOpV2EnvVar {
@@ -344,10 +331,6 @@ export namespace run_v2 {
      * Holds the single container that defines the unit of execution for this Revision.
      */
     containers?: Schema$GoogleCloudRunOpV2Container[];
-    /**
-     * Output only. Status information for each of the containers specified.
-     */
-    containerStatuses?: Schema$GoogleCloudRunOpV2ContainerStatus[];
     /**
      * Output only. The creation time.
      */
@@ -2955,7 +2938,6 @@ export namespace run_v2 {
      *   //   "conditions": [],
      *   //   "confidential": false,
      *   //   "containerConcurrency": 0,
-     *   //   "containerStatuses": [],
      *   //   "containers": [],
      *   //   "createTime": "my_createTime",
      *   //   "deleteTime": "my_deleteTime",
